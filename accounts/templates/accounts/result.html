@@ -1,0 +1,12 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Success!</h4>
+    <h1>{{ veg }} Price= Rs {{output}}</h1>
+    <h1>on Date :[{{day}}-{{month}}-{{year}}]</h1>
+    <hr>
+    <p class="mb-0">Predict Another <a href="/predict">here</a></p>
+
+  </div>
+{% endblock %}

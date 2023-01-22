@@ -1,0 +1,63 @@
+{%  extends 'accounts/main.html' %}
+{% block content %}
+<div class="container mt-3">
+    <form class="form" action="{% url 'result' %}" id="veg">
+        {% csrf_token %}
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Choose a Vegetable:</label>
+            <div class="col-sm-10">
+                <select id="veg" name="vegetable" form="veg">
+                    <option value="Potato">Potato</option>
+                    <option value="Onion">Onion</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Cauli">Cauli</option>
+                    </select>
+            </div>
+            
+        </div>
+        <div class="mb-3 row">
+          <h5>Enter Date in AD</h5>
+          <label class="col-sm-2 col-form-label">Day</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              name="day"
+              placeholder="Day"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label">Month</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              name="month"
+              placeholder="Month"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label">Year</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              name="year"
+              step="0.01"
+              placeholder="Year"
+              required
+            />
+          </div>
+        </div>
+        </div>
+        <div class="col text-center">
+            <button class="btn btn-info">Predict!</button>
+          </div>
+      </form>
+</div>
+
+
+
+
+{% endblock %}

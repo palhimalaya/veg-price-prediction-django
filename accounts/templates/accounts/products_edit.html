@@ -1,0 +1,46 @@
+{% extends 'accounts/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<br>
+<div class ='row'>
+    <div class='col-md-6 offset-md-3 p-3 bg-white'>
+        <div class='card card-body'>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+               
+                    <h5>Name</h5>
+                    {{form.name}}
+                    <hr>
+                    <h5>Price</h5>
+                    {{form.price}}
+                    <hr>
+                    <h5>Quantity</h5>
+                    {{form.quantity}}
+                    <hr>
+                    <h5>Category</h5>
+                    {{form.category}}
+                    <hr>
+                    <h5>Descrption</h5>
+                    {{form.description}}
+                    <hr>
+                    <h5>Tag</h5>
+                    {{form.tages}}
+                    <hr>
+                   
+               
+                <input type="submit" name="Submit" id="">
+            
+            </form>
+
+            
+        </div>    
+    </div>
+
+</div>
+
+
+{% endblock%}
