@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-z6hk)_zktlo!7#ub&v(ex7fpo&8df6915cfa1s(8*l07k5xgro
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'accounts.apps.AccountsConfig',
     'django_filters',
     'crispy_forms',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -75,7 +75,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'crm1.wsgi.application'
 
-
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -132,6 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
-] 
+]
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
